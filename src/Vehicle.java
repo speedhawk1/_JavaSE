@@ -29,16 +29,21 @@ public class Vehicle { // 交通工具
         this.maxSpeed = maxSpeed;
     }
 
-    void run() {
-        System.out.println("running...");
+    void run(String name) { // 形式参数 形参
+        System.out.println(name + " is running...");
     }
 
-    void stop() {
-
+    int stop() {
+        return 1;
     }
 
-    void transport() {
+    boolean transport() {
+        System.out.println("");
+        return true;
+    }
 
+    void test() {
+//        return;
     }
 
     public static void main(String[] args) {
@@ -48,7 +53,7 @@ public class Vehicle { // 交通工具
         System.out.println(car.weight);
         System.out.println(car.maxSpeed);
 
-        car.run();
+        car.run("我的车"); // 实际参数 实参
         Vehicle plane = new Vehicle();
 
         Vehicle bike = new Vehicle(); // Ctrl + p(parameter)
