@@ -33,4 +33,9 @@ public class Human { //
 
     }
 
+    public static void main(String[] args) {
+        Human zhangsan = new Human();
+        Human lisi = new Human();
+    }
+
 }
