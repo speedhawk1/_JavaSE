@@ -9,17 +9,9 @@ public class Vehicle { // 交通工具
     double maxSpeed;
 
 
-    Vehicle() { // constructor
-
-    }
-
-//    Vehicle(String type, String color, double weight, double maxSpeed) {
-//        this.type = type;
-//        this.color = color;
-//        this.weight = weight;
-//        this.maxSpeed = maxSpeed;
+//    Vehicle() { // constructor
+//        System.out.println("vehicle...");
 //    }
-
 
     // Alt + Insert, Enter, Ctrl + A, Enter
     public Vehicle(String type, String color, double weight, double maxSpeed) {
@@ -54,8 +46,8 @@ public class Vehicle { // 交通工具
         System.out.println(car.maxSpeed);
 
         car.run("我的车"); // 实际参数 实参
-        Vehicle plane = new Vehicle();
+//        Vehicle plane = new Vehicle();
 
-        Vehicle bike = new Vehicle(); // Ctrl + p(parameter)
+//        Vehicle bike = new Vehicle(); // Ctrl + p(parameter)
     }
 }
