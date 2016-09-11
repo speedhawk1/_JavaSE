@@ -1,3 +1,5 @@
+package demo;
+
 /**
  * Created by Administrator
  * 2016/9/10.
@@ -20,6 +22,10 @@ public class Human { //
 
     public Human(String name) {
         this.name = name;
+    }
+
+    public Human(double height) {
+        this.height = height;
     }
 
     public Human(String name, int age, char gender, double height, double weight, boolean isMarried) {

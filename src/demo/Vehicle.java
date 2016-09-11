@@ -1,3 +1,5 @@
+package demo;
+
 /**
  * Created by Administrator
  * 2016/9/10.
@@ -9,9 +11,9 @@ public class Vehicle { // 交通工具
     double maxSpeed;
 
 
-//    Vehicle() { // constructor
+    Vehicle() { // constructor
 //        System.out.println("vehicle...");
-//    }
+    }
 
     // Alt + Insert, Enter, Ctrl + A, Enter
     public Vehicle(String type, String color, double weight, double maxSpeed) {
@@ -30,7 +32,7 @@ public class Vehicle { // 交通工具
     }
 
     boolean transport() {
-        System.out.println("");
+        System.out.println("交通工具在运输。。。");
         return true;
     }
 
