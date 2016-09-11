@@ -11,11 +11,11 @@ public class Chinese extends Human {
     }
 }
 
-class Demo extends Chinese{
-
-    public static void main(String[] args) {
-        Demo demo = new Demo();
-        Chinese chinese = new Chinese();
-        System.out.println(chinese instanceof Demo);
-    }
-}
+//class Demo extends Chinese{
+//
+//    public static void main(String[] args) {
+//        Demo demo = new Demo();
+//        Chinese chinese = new Chinese();
+//        System.out.println(chinese instanceof Demo);
+//    }
+//}
