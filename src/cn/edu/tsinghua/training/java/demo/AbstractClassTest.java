@@ -6,6 +6,8 @@ package cn.edu.tsinghua.training.java.demo;
  */
 public abstract class AbstractClassTest {
 
+    private int i;
+
     public abstract void test(int i);
 
     public void method() {
