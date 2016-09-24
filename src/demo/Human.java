@@ -11,7 +11,7 @@ public class Human { //
 //    1. fields
 
     String name;
-    int age;
+    protected int age;
     char gender;
     double height;
     double weight;
@@ -39,8 +39,8 @@ public class Human { //
 
     //    2. methods
 
-    void studey() {
-
+    protected void study() {
+        System.out.println("human study...");
     }
 
     void work() {
