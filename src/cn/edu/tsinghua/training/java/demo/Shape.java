@@ -37,8 +37,72 @@ class Circle extends Shape {
 }
 
 // Square
+class Square extends Shape {
+
+    private double length;
+
+    public Square(double length) {
+        this.length = length;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return length * 4;
+    }
+
+    @Override
+    public double getArea() {
+        return length * length;
+    }
+}
+
 // Rectangle
+class Rectangle extends Shape {
+
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return (width + height) * 2;
+    }
+
+    @Override
+    public double getArea() {
+        return width * height;
+    }
+}
+
 // Triangle
+class Triangle extends Shape {
+
+    private double a;
+    private double b;
+    private double c;
+
+    public Triangle(double a, double b, double c) {
+        // if
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return (a + b + c);
+    }
+
+    @Override
+    public double getArea() {
+        double d = (a + b + c) / 2;
+        return Math.sqrt(d*(d - a) * (d - b) * (d - c));
+    }
+}
 
 // Test
 class ShapeTest {
@@ -48,5 +112,8 @@ class ShapeTest {
         System.out.println(circle.getPerimeter());
         System.out.println(circle.getArea());
         System.out.println(circle.test());
+
+        Triangle triangle = new Triangle(3, 2, 5);
+        System.out.println(triangle.getArea());
     }
 }
