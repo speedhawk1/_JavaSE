@@ -6,7 +6,6 @@ package cn.edu.tsinghua.training.java.demo;
  */
 public class ScopeTest {
 
-
     public void m1(int k) {
         int j = 0;
         System.out.println(j);
@@ -15,7 +14,6 @@ public class ScopeTest {
         for (int m = 0; m < 10; m++) {
             System.out.println(m);
         }
-
 
         for (int m = 0; m < 10; m++) {
             System.out.println(m);
