@@ -4,16 +4,16 @@ package cn.edu.tsinghua.training.java.demo;
  * Created by Administrator
  * 2016/9/24.
  */
-public abstract class Shape {
+public interface Shape {
     //    1. 求周长
-    public abstract double getPerimeter();
+    double getPerimeter();
 
     //    2. 求面积
-    public abstract double getArea();
+    double getArea();
 }
 
 // Circle
-class Circle extends Shape {
+class Circle implements Shape {
 
     private double radius;
 
@@ -37,7 +37,7 @@ class Circle extends Shape {
 }
 
 // Square
-class Square extends Shape {
+class Square implements Shape {
 
     private double length;
 
@@ -57,7 +57,7 @@ class Square extends Shape {
 }
 
 // Rectangle
-class Rectangle extends Shape {
+class Rectangle implements Shape {
 
     private double width;
     private double height;
@@ -79,7 +79,7 @@ class Rectangle extends Shape {
 }
 
 // Triangle
-class Triangle extends Shape {
+class Triangle implements Shape {
 
     private double a;
     private double b;
