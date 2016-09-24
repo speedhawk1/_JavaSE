@@ -17,10 +17,14 @@ public class PassVariable {
 //        System.out.println("3: " + i); // 1
 //    }
 
-    public static void test(PassVariable passVariable) {
-        System.out.println(passVariable.i); // 0
-        passVariable.i ++;
-        System.out.println(passVariable.i); // 1
+//    public static void test(PassVariable passVariable) {
+//        System.out.println(passVariable.i); // 0
+//        passVariable.i ++;
+//        System.out.println(passVariable.i); // 1
+//    }
+
+    public static void test(String s) {
+        s += "test";
     }
 
     public static void main(String[] args) {
@@ -29,9 +33,13 @@ public class PassVariable {
 //        test(i); // 实际参数
 //        System.out.println("4: " + i); // ?
 
-        PassVariable passVariable = new PassVariable();
-        System.out.println(passVariable.i); // 0
-        test(passVariable);
-        System.out.println(passVariable.i); // ?
+//        PassVariable passVariable = new PassVariable();
+//        System.out.println(passVariable.i); // 0
+//        test(passVariable);
+//        System.out.println(passVariable.i); // ?
+
+        String s = "test";
+        test(s);
+        System.out.println(s);
     }
 }
