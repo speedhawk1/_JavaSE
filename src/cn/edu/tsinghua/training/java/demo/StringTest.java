@@ -40,18 +40,39 @@ public class StringTest {
 
         System.out.println(s.substring(s.indexOf("o"), s.indexOf("o") + 2));
 
+
         System.out.println(s.toUpperCase().toLowerCase());
 
 
+        String s3 = "heLLo";
+
+        System.out.println(upper(s3));
+        System.out.println(lower(s3));
+
+        System.out.println("==============");
+        String s4 = "hello";
+        s4 = "hi";
+        System.out.println(s4);
     }
 
-    public String upper(String s) {
-
-        return "";
+    public static String upper(String s) {
+        char[] chars = s.toCharArray();
+        for (int j = 0; j < chars.length; j++) {
+            if (chars[j] >= 'a' && chars[j] <= 'z') {
+                chars[j] -= 32;
+            }
+        }
+        return new String(chars);
     }
 
-    public String lower(String s) {
-
-        return "";
+    public static String lower(String s) {
+        char[] chars = s.toCharArray();
+        for (int j = 0; j < chars.length; j++) {
+            if (chars[j] >= 'A' && chars[j] <= 'Z') {
+                chars[j] += 32;
+            }
+        }
+        return new String(chars);
     }
+
 }
