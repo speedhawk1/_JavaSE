@@ -26,5 +26,8 @@ public class StringBufferTest {
         }
         System.out.println(System.currentTimeMillis() - start);
         System.out.println(stringBuffer.toString());
+
+        System.out.println(System.currentTimeMillis()/1000/60/60/24/365);
+
     }
 }
