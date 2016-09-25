@@ -15,7 +15,12 @@ public class StringTest {
         StringTest.i = 1;
 
 
-        String s = "hello";
-        System.out.println(s.charAt(1));
+        String s = "hello你好";
+        System.out.println(s.charAt(s.length() - 1));
+        System.out.println(s.length());
+        String s1 = "hi";
+        System.out.println(s + s1);
+
+        System.out.println(s.contains("a")); // Ctrl + Q
     }
 }
