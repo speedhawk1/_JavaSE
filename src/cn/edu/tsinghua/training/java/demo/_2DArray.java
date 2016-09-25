@@ -19,7 +19,7 @@ public class _2DArray {
 
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
-//                ints[i][j] = i + j;
+//                ints[i][j] = i + k;
             }
         }
 
