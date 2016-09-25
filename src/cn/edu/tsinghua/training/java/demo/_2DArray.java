@@ -19,7 +19,7 @@ public class _2DArray {
 
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
-//                ints[i][j] = i + k;
+//                ints[i][j] = i + kw;
             }
         }
 
@@ -29,5 +29,13 @@ public class _2DArray {
         System.out.println(ints[2].length); // 2
 
         String[][][] strings = new String[1][2][3];
+
+        for (String[][] string : strings) {
+            for (String[] strings1 : string) {
+                for (String s : strings1) {
+                    System.out.println(s);
+                }
+            }
+        }
     }
 }
