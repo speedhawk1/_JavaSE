@@ -14,8 +14,8 @@ public class Test extends Object {
         System.out.println(test);
     }
 
-//    @Override
-//    public String toString() {
-//        return "a Test class instance...";
-//    }
+    @Override
+    public String toString() {
+        return "a Test class instance...";
+    }
 }
