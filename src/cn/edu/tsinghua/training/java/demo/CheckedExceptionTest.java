@@ -10,9 +10,19 @@ import java.util.Scanner;
  * Created by Administrator
  * 2016/10/15.
  */
+
+//class MyException extends RuntimeException {}
+
 public class CheckedExceptionTest {
 
     public static void main(String[] args) {
+
+        try {
+            throw new NullPointerException();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("input file name: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
