@@ -10,12 +10,21 @@ import java.io.OutputStream;
  */
 public class OutputStreamTest {
     public static void main(String[] args) {
+        OutputStream outputStream = null;
         try {
-            OutputStream outputStream = new FileOutputStream("c:/1.txt");
+            outputStream = new FileOutputStream("c:/1.txt");
             outputStream.write((int)'一'); // 一 4E00
-            outputStream.flush();
+//            outputStream.flush();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (outputStream != null) {
+                try {
+                    outputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

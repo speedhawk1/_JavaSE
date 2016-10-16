@@ -10,12 +10,21 @@ import java.io.Writer;
  */
 public class WriterTest {
     public static void main(String[] args) {
+        Writer writer = null;
         try {
-            Writer writer = new FileWriter("c:/2.txt");
+            writer = new FileWriter("c:/3.txt");
             writer.write("中文");
-            writer.flush();
+//            writer.flush();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

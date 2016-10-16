@@ -1,5 +1,6 @@
 package cn.edu.tsinghua.training.java.demo;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,9 +22,13 @@ public class InputStreamTest {
     public static void main(String[] args) {
 //        method();
 
+        File file = new File("c:/4.txt");
+        System.out.println(file.length());
+
+        InputStream inputStream = null;
         try {
             // 基于字节的输入流
-            InputStream inputStream = new FileInputStream("src/cn/edu/tsinghua/training/java/demo/InputStreamTest.java");
+            inputStream = new FileInputStream("c:/4.txt");
             int i = inputStream.read();
             while (i != -1) {
                 System.out.print((char) i);
@@ -31,6 +36,14 @@ public class InputStreamTest {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
