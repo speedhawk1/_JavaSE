@@ -1,7 +1,6 @@
 package cn.edu.tsinghua.training.java.demo;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -23,8 +22,13 @@ public class InputStreamTest {
 //        method();
 
         try {
-            InputStream inputStream = new FileInputStream("c:/test.txt");
-            System.out.println((char)inputStream.read());
+            // 基于字节的输入流
+            InputStream inputStream = new FileInputStream("src/cn/edu/tsinghua/training/java/demo/InputStreamTest.java");
+            int i = inputStream.read();
+            while (i != -1) {
+                System.out.print((char) i);
+                i = inputStream.read();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
