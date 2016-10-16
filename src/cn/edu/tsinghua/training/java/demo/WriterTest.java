@@ -10,6 +10,7 @@ import java.io.Writer;
  */
 public class WriterTest {
     public static void main(String[] args) {
+        /*
         Writer writer = null;
         try {
             writer = new FileWriter("c:/3.txt");
@@ -26,5 +27,25 @@ public class WriterTest {
                 }
             }
         }
+        */
+
+        try (Writer writer = new MyFileWriter("c:/5.txt")) { // try with resources
+            writer.write("汉字。。。");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class MyFileWriter extends FileWriter {
+
+    public MyFileWriter(String fileName) throws IOException {
+        super(fileName);
+    }
+
+    @Override
+    public void close() throws IOException {
+        super.close();
+        System.out.println("closed...");
     }
 }
